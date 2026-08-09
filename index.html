@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Model United Nations - Shape the future through diplomacy, debate, and global leadership. Join the world's most prestigious student simulation of the United Nations.">
+    <title>Model United Nations | Shape Tomorrow's Leaders</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-globe-americas"></i>
+                </div>
+                <span>MUN<span class="accent">.</span></span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#committees" class="nav-link">Committees</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#join" class="nav-link">Join</a></li>
+            </ul>
+            <button class="nav-cta" onclick="scrollToSection('join')">Register Now</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="pulse"></span>
+                Global Diplomacy Starts Here
+            </div>
+            <h1 class="hero-title">
+                <span class="line reveal">Shape the World</span>
+                <span class="line reveal delay-1">Through <span class="gradient-text">Diplomacy</span></span>
+            </h1>
+            <p class="hero-subtitle reveal delay-2">
+                Experience the power of international relations. Debate global issues, forge alliances, 
+                and become the leader the world needs — all in the most immersive Model United Nations experience.
+            </p>
+            <div class="hero-buttons reveal delay-3">
+                <button class="btn btn-primary" onclick="scrollToSection('join')">
+                    <span>Start Your Journey</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                    <span>Discover More</span>
+                </button>
+            </div>
+            <div class="hero-stats reveal delay-4">
+                <div class="stat">
+                    <span class="stat-number" data-target="150">0</span>+
+                    <span class="stat-label">Countries Represented</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="5000">0</span>+
+                    <span class="stat-label">Delegates Annually</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="25">0</span>+
+                    <span class="stat-label">Years of Excellence</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="globe-container">
+                <div class="globe">
+                    <div class="globe-ring"></div>
+                    <div class="globe-ring ring-2"></div>
+                    <div class="globe-ring ring-3"></div>
+                    <i class="fas fa-globe-americas globe-icon"></i>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">About MUN</span>
+                <h2 class="section-title reveal">What is <span class="gradient-text">Model United Nations</span>?</h2>
+                <p class="section-desc reveal">
+                    Model United Nations is an authentic simulation of the United Nations, where students 
+                    step into the shoes of diplomats and tackle the world's most pressing challenges.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <div class="card-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Debate & Discourse</h3>
+                    <p>Engage in high-level debate on real-world issues. Develop critical thinking, public speaking, and negotiation skills that last a lifetime.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="about-card reveal delay-1">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Diplomacy in Action</h3>
+                    <p>Build alliances, draft resolutions, and navigate complex international politics just like real diplomats at the UN Headquarters.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="about-card reveal delay-2">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Global Network</h3>
+                    <p>Connect with ambitious students from around the world. Form friendships and professional relationships that span continents.</p>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="about-card reveal delay-3">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Leadership Excellence</h3>
+                    <p>Graduate with unmatched leadership experience. MUN alumni go on to careers in diplomacy, law, business, and public service.</p>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Committees Section -->
+    <section id="committees" class="committees">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Our Committees</span>
+                <h2 class="section-title reveal">Choose Your <span class="gradient-text">Arena</span></h2>
+                <p class="section-desc reveal">
+                    From crisis cabinets to specialized agencies — find the committee that challenges and inspires you.
+                </p>
+            </div>
+            <div class="committees-grid">
+                <div class="committee-card reveal" data-committee="ga">
+                    <div class="committee-header">
+                        <div class="committee-icon"><i class="fas fa-landmark"></i></div>
+                        <span class="committee-level">Beginner Friendly</span>
+                    </div>
+                    <h3>General Assembly</h3>
+                    <p>The largest and most inclusive body. Debate topics ranging from sustainable development to human rights with hundreds of delegates.</p>
+                    <ul class="committee-topics">
+                        <li>Sustainable Development Goals</li>
+                        <li>Global Health Security</li>
+                        <li>Disarmament & International Security</li>
+                    </ul>
+                    <button class="committee-btn">Explore <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="committee-card reveal delay-1" data-committee="sc">
+                    <div class="committee-header">
+                        <div class="committee-icon"><i class="fas fa-balance-scale"></i></div>
+                        <span class="committee-level advanced">Advanced</span>
+                    </div>
+                    <h3>Security Council</h3>
+                    <p>The most powerful organ of the UN. Address threats to international peace and security with the weight of veto power.</p>
+                    <ul class="committee-topics">
+                        <li>Conflict Resolution</li>
+                        <li>Peacekeeping Operations</li>
+                        <li>Non-Proliferation</li>
+                    </ul>
+                    <button class="committee-btn">Explore <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="committee-card reveal delay-2" data-committee="ecosoc">
+                    <div class="committee-header">
+                        <div class="committee-icon"><i class="fas fa-chart-line"></i></div>
+                        <span class="committee-level">Intermediate</span>
+                    </div>
+                    <h3>ECOSOC</h3>
+                    <p>Economic and Social Council. Shape policies on trade, development, education, and the future of the global economy.</p>
+                    <ul class="committee-topics">
+                        <li>International Trade</li>
+                        <li>Climate Finance</li>
+                        <li>Digital Economy</li>
+                    </ul>
+                    <button class="committee-btn">Explore <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="committee-card reveal delay-3" data-committee="crisis">
+                    <div class="committee-header">
+                        <div class="committee-icon"><i class="fas fa-bolt"></i></div>
+                        <span class="committee-level crisis">Crisis</span>
+                    </div>
+                    <h3>Crisis Committees</h3>
+                    <p>Fast-paced, dynamic simulations. Respond to rapidly evolving scenarios in real-time with creative directives.</p>
+                    <ul class="committee-topics">
+                        <li>Historical Crisis</li>
+                        <li>Futuristic Scenarios</li>
+                        <li>Joint Crisis</li>
+                    </ul>
+                    <button class="committee-btn">Explore <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">The Experience</span>
+                <h2 class="section-title reveal">Why Delegates <span class="gradient-text">Love MUN</span></h2>
+            </div>
+            <div class="experience-content">
+                <div class="experience-visual reveal">
+                    <div class="exp-image-wrapper">
+                        <div class="exp-card floating">
+                            <i class="fas fa-microphone-alt"></i>
+                            <span>Public Speaking</span>
+                        </div>
+                        <div class="exp-card floating delay-1">
+                            <i class="fas fa-brain"></i>
+                            <span>Critical Thinking</span>
+                        </div>
+                        <div class="exp-card floating delay-2">
+                            <i class="fas fa-globe"></i>
+                            <span>Global Perspective</span>
+                        </div>
+                        <div class="exp-center">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-list">
+                    <div class="exp-item reveal">
+                        <div class="exp-number">01</div>
+                        <div class="exp-text">
+                            <h3>Unparalleled Skill Development</h3>
+                            <p>Master public speaking, negotiation, research, and writing under pressure. Skills that translate directly to university interviews and career success.</p>
+                        </div>
+                    </div>
+                    <div class="exp-item reveal delay-1">
+                        <div class="exp-number">02</div>
+                        <div class="exp-text">
+                            <h3>Authentic UN Simulation</h3>
+                            <p>Experience the real procedures, rules of procedure, and atmosphere of United Nations conferences with professional chairs and authentic materials.</p>
+                        </div>
+                    </div>
+                    <div class="exp-item reveal delay-2">
+                        <div class="exp-number">03</div>
+                        <div class="exp-text">
+                            <h3>Lifelong Connections</h3>
+                            <p>Meet future leaders, entrepreneurs, and change-makers from every corner of the globe. Many of our delegates stay connected for decades.</p>
+                        </div>
+                    </div>
+                    <div class="exp-item reveal delay-3">
+                        <div class="exp-number">04</div>
+                        <div class="exp-text">
+                            <h3>Awards & Recognition</h3>
+                            <p>Outstanding delegates receive prestigious awards recognized by universities and employers worldwide. Build a standout portfolio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Upcoming</span>
+                <h2 class="section-title reveal">Featured <span class="gradient-text">Conferences</span></h2>
+            </div>
+            <div class="events-slider">
+                <div class="event-card reveal active">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">OCT</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-tag">Flagship Conference</span>
+                        <h3>Global Summit 2026</h3>
+                        <p>Our premier annual conference bringing together 2,000+ delegates from 80+ countries for four days of intense diplomacy.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Geneva, Switzerland</span>
+                            <span><i class="fas fa-users"></i> 2000+ Delegates</span>
+                        </div>
+                    </div>
+                    <button class="event-btn">Register Interest</button>
+                </div>
+                <div class="event-card reveal delay-1">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">NOV</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-tag secondary">Regional</span>
+                        <h3>Asia-Pacific MUN</h3>
+                        <p>A dynamic regional conference focused on Asia-Pacific challenges with specialized crisis committees and workshops.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Singapore</span>
+                            <span><i class="fas fa-users"></i> 800+ Delegates</span>
+                        </div>
+                    </div>
+                    <button class="event-btn">Register Interest</button>
+                </div>
+                <div class="event-card reveal delay-2">
+                    <div class="event-date">
+                        <span class="day">08</span>
+                        <span class="month">MAR</span>
+                    </div>
+                    <div class="event-info">
+                        <span class="event-tag tertiary">Training</span>
+                        <h3>Beginner Bootcamp</h3>
+                        <p>Perfect for first-time delegates. Intensive training sessions followed by a practice conference with guided feedback.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Online + Hybrid</span>
+                            <span><i class="fas fa-users"></i> 300+ Delegates</span>
+                        </div>
+                    </div>
+                    <button class="event-btn">Register Interest</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">Voices</span>
+                <h2 class="section-title reveal">What Delegates <span class="gradient-text">Say</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"MUN completely transformed how I see the world. The skills I gained in negotiation and public speaking landed me my dream internship at the UN itself."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <strong>Amira Hassan</strong>
+                            <span>Former Delegate • Now UN Intern</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal delay-1">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"The intensity of crisis committees taught me to think on my feet. No university course has ever given me this level of real-world preparation."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div>
+                            <strong>James Chen</strong>
+                            <span>Security Council Best Delegate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal delay-2">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <p>"I arrived nervous and left with lifelong friends from 12 different countries. The community here is truly special."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div>
+                            <strong>Sofia Rodriguez</strong>
+                            <span>3-time Delegate • ECOSOC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join / Registration Section -->
+    <section id="join" class="join">
+        <div class="container">
+            <div class="join-wrapper">
+                <div class="join-info reveal">
+                    <span class="section-tag">Get Started</span>
+                    <h2>Ready to <span class="gradient-text">Make History</span>?</h2>
+                    <p>Join thousands of students who have discovered their voice on the global stage. Registration for upcoming conferences is now open.</p>
+                    <ul class="join-benefits">
+                        <li><i class="fas fa-check-circle"></i> Access to exclusive training materials</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized committee assignment</li>
+                        <li><i class="fas fa-check-circle"></i> Networking with global leaders</li>
+                        <li><i class="fas fa-check-circle"></i> Certificate of participation</li>
+                    </ul>
+                </div>
+                <div class="join-form-container reveal delay-1">
+                    <form id="registration-form" class="registration-form">
+                        <h3>Delegate Registration</h3>
+                        <div class="form-group">
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+                            <span class="form-focus"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                            <span class="form-focus"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" required placeholder="Your country">
+                                <span class="form-focus"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="experience">Experience Level</label>
+                                <select id="experience" name="experience" required>
+                                    <option value="" disabled selected>Select level</option>
+                                    <option value="beginner">Beginner (0-1 conferences)</option>
+                                    <option value="intermediate">Intermediate (2-5)</option>
+                                    <option value="advanced">Advanced (6+)</option>
+                                </select>
+                                <span class="form-focus"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="committee">Preferred Committee</label>
+                            <select id="committee" name="committee" required>
+                                <option value="" disabled selected>Choose committee</option>
+                                <option value="ga">General Assembly</option>
+                                <option value="sc">Security Council</option>
+                                <option value="ecosoc">ECOSOC</option>
+                                <option value="crisis">Crisis Committees</option>
+                            </select>
+                            <span class="form-focus"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Why do you want to join? (Optional)</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Tell us about your goals..."></textarea>
+                            <span class="form-focus"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <span>Submit Application</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p class="form-note">By submitting, you agree to our terms. We'll contact you within 48 hours.</p>
+                    </form>
+                    <div id="form-success" class="form-success hidden">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>Application Received!</h3>
+                        <p>Thank you for registering. Our team will review your application and get back to you shortly.</p>
+                        <button class="btn btn-secondary" onclick="resetForm()">Submit Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <span>MUN<span class="accent">.</span></span>
+                    </a>
+                    <p>Empowering the next generation of global leaders through authentic diplomacy and debate.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#about">About MUN</a></li>
+                        <li><a href="#committees">Committees</a></li>
+                        <li><a href="#events">Events</a></li>
+                        <li><a href="#join">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Rules of Procedure</a></li>
+                        <li><a href="#">Delegate Guide</a></li>
+                        <li><a href="#">Position Papers</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@modelun.org</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Model United Nations. All rights reserved. Crafted for future diplomats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Modal for Committee Details -->
+    <div id="committee-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
